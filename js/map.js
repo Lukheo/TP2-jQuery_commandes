@@ -29,24 +29,25 @@ orders.forEach(order => {
     let savedLat = localStorage.getItem(orderNum + "-lat")
     let savedLon = localStorage.getItem(orderNum + "-lon")
     if (savedLat) {
-        console.log(savedLat + " " + savedLon)
         let delDate = localStorage.getItem(orderNum)
         let marker
         switch (delDate) {
             case '26/01/2026':
                 marker = L.marker([savedLat, savedLon], { icon: icon1 }).addTo(map);
+                marker.bindPopup(`<b>${orderNum}</b><br>Livraison le ${delDate}`);
                 break;
             case '27/01/2026':
                 marker = L.marker([savedLat, savedLon], { icon: icon2 }).addTo(map);
+                marker.bindPopup(`<b>${orderNum}</b><br>Livraison le ${delDate}`);
                 break;
             case '28/01/2026':
                 marker = L.marker([savedLat, savedLon], { icon: icon3 }).addTo(map);
+                marker.bindPopup(`<b>${orderNum}</b><br>Livraison le ${delDate}`);
                 break;
 
             default:
                 break;
         }
-        marker.bindPopup(`<b>${orderNum}</b><br>Livraison le ${delDate}`);
 
     }
 
