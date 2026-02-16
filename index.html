@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 2 - jQuery UI</title>
+
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.14.1.custom/jquery-ui.theme.min.css">
+</head>
+
+<body class="p-2">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <p type="text" id="dates" readonly="">Du <b>12/01/2026</b> au <b>17/01/2026</b></p>
+            <div id="slider-range"></div>
+        </div>
+        <div class="col-auto button_container">
+            <a href="stats.html"><button>Statistiques</button></a>
+            <a href="map.html"><button>Carte</button></a>
+        </div>
+    </div>
+
+    <h1>Commandes</h1>
+    <div id="progressbar">
+        <div class="progressbar-label"></div>
+    </div>
+    <div id="orders-container" class="droppable" data-date="">
+
+    </div>
+    <h2>Livraisons</h2>
+    <div id="accordion">
+        <h3>26/01/2026</h3>
+        <div id="delivery1" data-date="26/01/2026" class="droppable column"></div>
+        <h3>27/01/2026</h3>
+        <div id="delivery2" data-date="27/01/2026" class="droppable column"></div>
+        <h3>28/01/2026</h3>
+        <div id="delivery3" data-date="28/01/2026" class="droppable column"></div>
+    </div>
+
+    <!-- Script JS -->
+
+    <script src="libs/jquery-ui-1.14.1.custom/external/jquery/jquery.js"></script>
+    <script src="libs/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+:root {
+    --bg-gradient: linear-gradient(-45deg,
+            limegreen,
+            white,
+            limegreen);
+}
+
+body {
+    margin: 0;
+    background: var(--bg-gradient);
+    background-size: 400% 400%;
+    animation: gradientMove 20s ease infinite;
+    height: 100vh;
+}
+
+#map {
+    border-radius: 25px;
+    border: 2px solid black;
+    height: 760px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.legende {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    div {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+            margin: auto;
+            font-weight: 900;
+        }
+    }
+
+}
+
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+}
+.order {
+    width: 300px;
+    z-index: 1;
+    color: var(--bs-body-color) !important;
+    font-family: var(--bs-body-font-family) !important;
+    font-size: var(--bs-body-font-size) !important;
+    line-height: var(--bs-body-line-height) !important;
+}
+
+.droppable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: 300px;
+}
+
+.progressbar-label {
+    position: absolute;
+    color: var(--bs-body-color) !important;
+    top: 15%;
+    left: 50%;
+    font-weight: 800;
+    transform: translate(-50%, -50%);
+}
+#slider-range {
+    width: 300px;
+}
+
+.chart-duo {
+    display: flex
+}
+
+.chart-duo canvas {
+    height: auto !important;
+    width: 45% !important;
+}
+
+.button_container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+button {
+    border-radius: 25px;
+    padding: 5px 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 2px solid limegreen;
+    background-color: limegreen;
+}
+button:hover {
+    background-color: transparent;
+}
