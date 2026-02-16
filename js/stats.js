@@ -42,30 +42,57 @@ $(function () {
     Chart.overrides.doughnut.cutout = '55%'
 
 
-    new Chart(ctx1, {
-        type: 'doughnut',
-        data: {
-            labels: ['26/01/2026', '27/01/2026', '28/01/2026'],
-            datasets: [{
-                data: [count1, count2, count3],
-                backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)'
-                ],
-                borderColor: '#000'
-            }]
-        },
-        options: {
-            responsive: true,
+    if (deliveredOrders == 0) {
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Pas de livraisons'],
+                datasets: [{
+                    data: [1],
+                    backgroundColor: [
+                        'rgba(0, 0, 0, .2'
+                    ],
+                    borderColor: 'transparent'
+                }]
+            },
+            options: {
+                responsive: true,
             plugins: {
                 title: {
                     display: true,
                     text: 'Livraisons par jour'
                 }
             }
-        }
-    });
+            }
+        });
+    } else {
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['26/01/2026', '27/01/2026', '28/01/2026'],
+                datasets: [{
+                    data: [count1, count2, count3],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    borderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Livraisons par jour'
+                    }
+                }
+            }
+        });
+        
+    }
+
 
     new Chart(ctx2, {
         type: 'doughnut',
